@@ -1,0 +1,65 @@
+/*------ MEMBER ADD EDIT FORM ------*/
+/* Clear floats */
+.form-container .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add padding to container elements */
+.form-container {
+  width: 80%;
+  height: auto;
+  overflow: auto;
+  padding: 15px;
+  border: 3px solid #ccc;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=number],
+.form-container input[type=file],
+.form-container input[type=password],
+.form-container input[type=date],
+.form-container select {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Set a style for all buttons */
+.form-container button {
+  padding: 10px 60px;
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+}
+
+.form-container #id_form_left {
+  float: none;
+  /* not needed, just for clarification */
+  /* the next props are meant to keep this block independent from the other floated one */
+  width: auto;
+  overflow: hidden;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {}
+
+@media only screen and (max-width: 768px) {
+
+  /* For mobile phones: */
+  [class*="form-"] {
+    width: 100%;
+  }

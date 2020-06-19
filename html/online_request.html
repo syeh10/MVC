@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Online Request</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Shu Wei Yeh Design, website design,software development">
+  <meta name="author" content="Shu Wei Yeh">
+  <script type="text/javascript">
+    function validateForm() {
+      var firstName = document.forms["signup"]["firstName"].value;
+      var lastName = document.forms["signup"]["lastName"].value;
+      var phone = document.forms["signup"]["phone"].value;
+      var email = document.forms["signup"]["email"].value;
+      var x = document.getElementById("phone").value;
+      if (firstName == "") {
+        alert("Please enter First Name.");
+        return false;
+      }
+      if (lastName == "") {
+        alert("Please enter Last Name.");
+        return false;
+      }
+      if (phone == "") {
+        alert("Please enter Phone number.");
+        return false;
+      }
+      if (phone == "" || isNaN(x)) {
+        alert("Oops!!! Please enter NUMBERs in the phone field.");
+        return false;
+      } //Make sure that numbers entered in the phone field is numeric
+      if (email == "") {
+        alert("Please enter Email.");
+        return false;
+      }
+      alert('All required fields are valid.');
+      return true;
+    }
+  </script>
+  <style>
+    body{
+          background-attachment: fixed;
+          background-repeat:repeat;
+          width: 100%;
+          margin-left:auto;
+          margin-right:auto;
+          font-family:Verdsns,sans-serif,Arial,"Times New Roman",Helvetica;
+          }
+      #form {
+              padding: 10px;
+              margin: 10px;
+              min-width: 80%;
+              }
+      #form div{padding: 10px;}
+      .submit{
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                }
+      .labels{
+              display: block;
+              margin-left: 10%;
+              }
+      .request{
+              width: 80%;
+              }
+      form{
+          background-color: #FCDEE0;
+          border: 0.5em solid #F9BEC2;
+          border-radius:60px;
+          }
+
+      label{
+            color: #700CBC;
+            font-weight: bold;
+            }
+      input{margin-right: auto;
+            margin-left: auto;}
+      legend{
+              color: #7B0F28;
+              font-weight: bold;
+              text-decoration: underline;
+            }
+      #wrapper{
+                position: relative;
+                top:0%;
+                left:0%;
+                max-width: 100%;
+              }
+      #container {
+                position: relative;
+                max-width:80%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+                }
+      #header{
+              position: relative;
+              top:0;
+              left:0;
+              margin-left: auto;
+              margin-right: auto;
+              max-width: 100%;
+              }
+      #header h1{
+                  top:0%;
+                  text-align: center;
+                  font-size: 3em;
+                  text-shadow: 2px 2px 2px #666;
+                  color: #750A53;
+                  }
+    </style>
+</head>
+
+<body onload="myFunction()">
+  <div id="wrapper">
+    <div id="container">
+      <form name="signup" method="post" action="http://infotech.scu.edu.au/cgi-bin/echo_form" onsubmit="return validateForm();">
+        <div id="header">
+          <h1>Online Request</h1>
+        </div>
+        <div id="form">
+          <div>
+            <fieldset>
+              <legend>Personal Details</legend>
+              <label class="labels"> First Name:
+                <input class="inputs" type="text" name="firstName" id="firstName" maxlenght="60" placeholder="First name"  required="required">
+              </label>
+              <label class="labels"> Last Name:
+                <input class="inputs" type="text" name="lastName" id="lastName" maxlenght="60" placeholder="Last name"  required="required">
+              </label>
+              <label class="labels"> Phone:
+                <input class="inputs" type="text" name="phone" id="phone" maxlenght="60" placeholder="0400 000 000"  required="required">
+              </label>
+              <label class="labels"> Email:
+                <input class="inputs" type="text" name="email" id="email" maxlenght="60" placeholder="john@abc.com"  required="required">
+              </label>
+            </fieldset>
+          </div>
+          <div class="request">
+            <legend>Requests:</legend>
+            <textarea name="request" id="request" cols="80" row="10" placeholder="Enter your requests here..."></textarea>
+          </div>
+          <div class="submit">
+            <input type="submit" name="submit" id="submit" value="Submit" onclick="btnRequestClick('cmd_request');">
+            <input type="reset" name="reset" id="reset" value="Reset">
+          </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

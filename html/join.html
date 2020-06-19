@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="clearfix">
+	<div id="id_error" style="color: red;"></div>
+</div>
+<h3>Add/Edit Member</h3>
+<link rel="stylesheet" href="../css/member_form.css" type="text/css">
+<form name="member" method="POST" enctype="multipart/form-data">
+	<input type="hidden" name="member_id">
+	<div class="form-container">
+		<div id="id_form_left">
+			<label><b>Surname</b></label>
+			<input type="text" placeholder="Surname" name="surname" id="surname" required><br>
+			<label><b>Other Name</b></label>
+			<input type="text" placeholder="Other Name" name="other_name" id="other_name"><br>
+			<label><b>Contact Method</b></label>
+			<input type="text" placeholder="Contact Method" name="contact_method" id="contact_method"><br>
+			<label><b>Email</b></label>
+			<input type="text" placeholder="email@hotmal.com" name="email" id="email"><br>
+			<label><b>Mobile</b></label>
+			<input type="text" placeholder="04..." name="mobile" id="mobile"><br>
+			<label><b>Landline</b></label>
+			<input type="text" placeholder="(07) 12345678" name="landline" id="landline"><br>
+			<label><b>Magazine</b></label>
+			<input type="number" placeholder="1" name="magazine" id="magazine"><br>
+			<label><b>Street</b></label>
+			<input type="text" placeholder="A3.05 Southern Cross Universit" name="street" id="street"><br>
+			<label><b>Suburb</b></label>
+			<input type="text" placeholder="Beachside, NSW" name="suburb" id="suburb"><br>
+			<label><b>Postcode</b></label>
+			<input type="number" placeholder="2485" name="postcode" id="postcode"><br>
+			<label><b>Username</b></label>
+			<input type="text" placeholder="username" name="username" id="username"><br>
+			<label><b>Password</b></label>
+			<input type="password" placeholder="password" name="password" id="initial"><br>
+			<label><b>Verify Password</b></label>
+			<input type="password" placeholder="password" name="password" id="second"><br>
+			<label><b>Occupation</b></label>
+			<input type="text" placeholder="Student/Teacher" name="occupation" id="occupation"><br>
+			<label><b onload="joinDate();">Join_date</b></label>
+			<input type="date" name="join_date" id="join_date"><br>
+			<div style="text-align: center; padding-top: 30px;">
+				<input type="button" name="btnSubmit" class="button" onclick="btnAddEditMemberSubmitClick(cmd_member_add);"> <br>
+				<button type="button" name="btnExit" class="button">Exit</button>
+			</div>
+			<div id="id_form_right">
+				<div style="text-align: center; padding-top: 30px;">
+					<button type="button" name="btnSubmit" class="button">Submit</button>
+					<button type="button" name="btnExit" class="button">Exit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+</html>
