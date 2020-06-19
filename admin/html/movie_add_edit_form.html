@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<div class="clearfix">
+	<div id="id_error" style="color: red;"></div>
+</div>
+<h3>Add/Edit Movie</h3>
+<form name="movie" method="POST" enctype="multipart/form-data">
+	<input type="hidden" name="movie_id">
+	<input type="hidden" name="photo">
+	<div class="form-container">
+		<div id="id_form_right">
+			<img class="photo" id="id_photo_frame" alt="movie photo" height="200" width="300">
+			<p><label><b>Movie photo (240px x 320px) </b></label></p>
+			<input type="file" name="photo_loader" onchange="loadPhoto(this);">
+			<div style="text-align: center; padding-top: 30px;">
+				<button type="button" name="btnSubmit" class="button">Submit</button>
+				<button type="button" name="btnExit" class="button">Exit</button>
+			</div>
+		</div>
+		<div id="id_form_left">
+			<label><b>Title</b></label>
+			<input type="text" placeholder="title e.g. Twilight ..." name="title" id="title">
+			<label><b>Tagline</b></label>
+			<input type="text" placeholder="tagline e.g. When you can live forever what do you live for?" name="tagline" id="tagline">
+			<label><b>Plot</b></label>
+			<input type="text" placeholder="plot e.g. A teenage girl risks everything when she falls in ..." name="plot" id="plot">
+
+			<label><b>Director</b></label>
+			<input type="text" placeholder="Catherine Hardwicke" name="director" id="id_director" autocomplete="off">
+			<div class="filter_box" id="id_director_filter"></div>
+
+			<label><b>Studio</b></label>
+			<input type="text" placeholder="DreamWorks Animation" name="studio" id="id_studio" autocomplete="off">
+			<div class="filter_box" id="id_studio_filter"></div>
+
+			<label><b>Genre</b></label>
+			<select name="genre" id="id_genre">
+			<option value="all">Select genre</option>
+		</select>
+
+			<label><b>Classification</b></label>
+			<input type="text" placeholder="classification e.g. PG, G, M ..." name="classification" id="classification">
+			<label><b>Rental Period</b></label>
+			<input type="text" placeholder="rental_period e.g. 3 Day, Weekly..." name="rental_period" id="rental_period">
+			<label><b>Year</b></label>
+			<input type="number" placeholder="made year e.g. 2000" name="year" id="id_year" min="1900" max="2018">
+			<label><b>DVD Rental Price</b></label>
+			<input type="decimal" placeholder="DVD_rental_price e.g.5.50" name="DVD_rental_price" id="DVD_rental_price" min="0" max="50000">
+			<label><b>DVD Purchase Price</b></label>
+			<input type="decimal" placeholder="DVD_purchase_price e.g.5.50" name="DVD_purchase_price" id="DVD_purchase_price" min="0" max="50000">
+			<label><b>Number of DVD</b></label>
+			<input type="number" placeholder="number DVD e.g. 20" name="numDVD" id="numDVD" min="0" max="100">
+			<label><b>Number of DVD Out</b></label>
+			<input type="number" placeholder="number of DVD lend/purchase out" name="numDVDout" id="numDVDout" min="0" max="100">
+			<label><b>BluRay DVD Rental Price</b></label>
+			<input type="decimal" placeholder="BluRay_rental_price e.g.5.50" name="BluRay_rental_price" id="BluRay_rental_price" min="0" max="5000">
+			<label><b>BluRay DVD Purchase Price</b></label>
+			<input type="decimal" placeholder="BluRay_purchase_price e.g.5.50" name="BluRay_purchase_price" id="BluRay_purchase_price" min="0" max="50000">
+			<label><b>Number of BluRay</b></label>
+			<input type="number" placeholder="number BluRay e.g. 20" name="numBluRay" id="numBluRay" min="0" max="100">
+			<label><b>Number of BluRay Out</b></label>
+			<input type="number" placeholder="number of BluRay lend/purchase out" name="numBluRayOut" id="numBluRayOut" min="0" max="100">
+		</div>
+		</div>
+</form>
