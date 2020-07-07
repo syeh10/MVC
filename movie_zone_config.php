@@ -4,10 +4,10 @@ We set the correspondence between all URLs and the Controller through config php
 */
 //modify suit your A2 database)
 // // DEVELOPMENT
-// define ('DB_CONNECTION_STRING', "mysql:host=localhost;dbname=syeh10CSC10217Ass1");
-define ('DB_CONNECTION_STRING', "mysql:host=infotech.scu.edu.au;dbname=syeh10CSC10217Ass1");
-define ('DB_USER', "syeh10");
-define ('DB_PASS', "22862541");
+// define ('DB_CONNECTION_STRING', "mysql:host=localhost;dbname=confidential");
+define ('DB_CONNECTION_STRING', "mysql:host=confidential;dbname=confidential");
+define ('DB_USER', "confidential");
+define ('DB_PASS', "confidential");
 define ('MSG_ERR_CONNECTION', "Open connection to the database first");
 //maximum number of random movies will be shown
 define ('MAX_RANDOM_MOVIES', 4);
